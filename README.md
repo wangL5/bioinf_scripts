@@ -1,1 +1,1 @@
-A compilation of my commonly used scripts for bioinformatic analysis
+Various bioinformatics scripts that I use often
