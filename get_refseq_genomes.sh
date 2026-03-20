@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # this script downloads NCBI refseq representative genomes from a list of species. Genus level ok.
 
