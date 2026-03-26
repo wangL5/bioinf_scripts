@@ -35,11 +35,11 @@ fi
 for FILE in ${FILEPATH}; do
     TMP_STATS=$(assembly-stats "$FILE")
     # TODO: add error handling for empty TMP_STATS file 
-    SAMPLE=$(echo "$TMP_STATS" | grep -P "(?<=stats for ).*")
-    SUM=$(echo "$TMP_STATS" | grep -P "(?<=sum = )\d+(?=,)")
-    N=$(echo "$TMP_STATS" | grep -P "(?<=n = )\d+(?=,)")
-    N50=$(echo "$TMP_STATS" | grep -P "(?<=N50 = )\d+(?=,)")
-    LARGEST=$(echo "$TMP_STATS" | grep -P "(?<=largest = )\d+")
+    SAMPLE=$(echo "$TMP_STATS" | grep -P -o "(?<=stats for ).*")
+    SUM=$(echo "$TMP_STATS" | grep -P -o "(?<=sum = )\d+(?=,)")
+    N=$(echo "$TMP_STATS" | grep -P -o "(?<=n = )\d+(?=,)")
+    N50=$(echo "$TMP_STATS" | grep -P -o "(?<=N50 = )\d+(?=,)")
+    LARGEST=$(echo "$TMP_STATS" | grep -P -o "(?<=largest = )\d+")
     echo -e "$SAMPLE\t$SUM\t$N\t$N50\t$LARGEST" >> "$output_file"
 done
 
