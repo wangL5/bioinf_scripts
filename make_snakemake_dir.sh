@@ -4,6 +4,7 @@
 
 mkdir -p workflow
 mkdir -p workflow/envs
+touch workflow/snakefile
 mkdir -p config
 mkdir -p results 
 
