@@ -2,6 +2,8 @@
 
 # summarize the outputs from assembly-stats into an output table 
 
+# TO DO - instead of grabbing the sample name from the assembly-stats output, get it using basename or dirname
+
 # activate env 
 eval "$(conda shell.bash hook)"
 conda activate misc_tools
