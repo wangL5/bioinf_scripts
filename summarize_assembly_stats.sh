@@ -34,6 +34,7 @@ fi
 
 for FILE in ${FILEPATH}; do
     TMP_STATS=$(assembly-stats "$FILE")
+    # TODO: add error handling for empty TMP_STATS file 
     SAMPLE=$(echo "$TMP_STATS" | grep -P "(?<=stats for ).*")
     SUM=$(echo "$TMP_STATS" | grep -P "(?<=sum = )\d+(?=,)")
     N=$(echo "$TMP_STATS" | grep -P "(?<=n = )\d+(?=,)")
